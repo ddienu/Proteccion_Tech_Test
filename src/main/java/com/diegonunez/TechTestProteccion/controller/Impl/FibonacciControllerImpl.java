@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalTime;
 import java.util.List;
 
 @RestController
@@ -23,7 +22,6 @@ public class FibonacciControllerImpl implements IFibonacciController {
     public FibonacciControllerImpl(IFibonacciService fibonacciService){
         this.fibonacciService = fibonacciService;
     }
-
 
     @Override
     public ResponseEntity<APIResponseDTO<List<Long>>> getFibonacciSeries(FibonacciRequestDTO time) {

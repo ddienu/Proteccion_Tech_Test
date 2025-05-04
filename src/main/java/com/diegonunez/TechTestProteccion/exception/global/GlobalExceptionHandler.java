@@ -4,11 +4,13 @@ import com.diegonunez.TechTestProteccion.dto.response.APIResponseDTO;
 import com.diegonunez.TechTestProteccion.exception.custom.FibonacciZeroBeansException;
 import com.diegonunez.TechTestProteccion.exception.custom.NoSeriesFoundException;
 import com.diegonunez.TechTestProteccion.exception.custom.SeriesLengthException;
+import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
+@Hidden
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(NoSeriesFoundException.class)
